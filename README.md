@@ -1,15 +1,17 @@
-PCA9539
-Arduino Library to approach PCA9555 I2C expander with digitalRead, digitalWrite and pinMode functions.
+# PCA9555
+Arduino Library to approach PCA9539 I2C expander with digitalRead, digitalWrite and pinMode functions.
 
 ##Installation:
+* a) Just download the zip file
+* b) move PCA9539_LIB to the Users Arduino library (usually My documents\Arduino\Libraries)
+* c) Create a new sketch and copy the example file into your sketch 
+* d) Compile, download and done.
 
-a) Just download the zip file
-b) move PCA9539_LIB to the Users Arduino library (usually My documents\Arduino\Libraries)
-c) Create a new sketch and copy the example file into your sketch
-d) Compile, download and done.
-Support functions:
-pinMode() same as standard Arduino
-digitalRead() same as Arduino
-digitalWrite() same as Arduino
-Additional
+## Support functions:
+
+* pinMode() same as standard Arduino
+* digitalRead() same as Arduino
+* digitalWrite() same as Arduino
+ 
+## Additional
 The code supports either pinnumbers 0 - 15 or ED0 - ED15. This to stay more or less in sync with Arduino.
