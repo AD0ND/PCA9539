@@ -10,7 +10,7 @@
 PCA9539 ioport(0x74); // Base address starts at 0x74 for A0 = L and A1 = L
 
 //Base address for PCA9539 devices 
-//Address   A0    A1
+//Address   A1    A0
 //0x74      L     L
 //0x75      L     H
 //0x76      H     L
