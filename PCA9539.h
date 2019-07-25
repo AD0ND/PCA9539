@@ -30,7 +30,7 @@ enum {
 #define NXP_INVERT     4
 #define NXP_CONFIG     6
 
-class PCA9555 {
+class PCA9539 {
 public:
     PCA9539(uint8_t address);                            // constructor
     void pinMode(uint8_t pin, uint8_t IOMode );          // pinMode
