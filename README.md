@@ -2,7 +2,7 @@
 Arduino Library to approach PCA9539 I2C expander with digitalRead, digitalWrite and pinMode functions.
 
 **NOTE**
-Pull RESET (pin 3) HIGH for normal operation.
+Pull RESET (pin 3) HIGH for normal operation on TI variant.
 
 Device addressing varies between vendors, if you cannot find the address on the I2C bus use
 the I2C Scanner sketch by Nick Gammon to determine correct address.
