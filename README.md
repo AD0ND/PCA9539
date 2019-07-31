@@ -3,6 +3,10 @@ Arduino Library to approach PCA9539 I2C expander with digitalRead, digitalWrite 
 **NOTE**
 Pull RESET (pin 3) HIGH for normal operation.
 
+Device addressing varies between vendors, if you cannot find the address on the I2C bus use
+the I2C Scanner sketch by Nick Gammon to determine correct address.
+http://www.gammon.com.au/i2c
+
 ##Installation:
 * a) Just download the zip file
 * b) move PCA9539_LIB to the Users Arduino library (usually My documents\Arduino\Libraries)
