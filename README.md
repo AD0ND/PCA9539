@@ -1,5 +1,7 @@
 # PCA9539
 Arduino Library to approach PCA9539 I2C expander with digitalRead, digitalWrite and pinMode functions.
+**NOTE**
+Pull RESET (pin 3) HIGH for normal operation.
 
 ##Installation:
 * a) Just download the zip file
@@ -14,4 +16,7 @@ Arduino Library to approach PCA9539 I2C expander with digitalRead, digitalWrite 
 * digitalWrite() same as Arduino
  
 ## Additional
-The code supports either pinnumbers 0 - 15 or ED0 - ED15. This to stay more or less in sync with Arduino.
+The code supports either pinnumbers 0 - 15 (port 0 = 0-7, port 1 = 8-15) or EA0 - EA7 and EB0 - EB7. This to stay more or less in sync with Arduino.
+
+## Data Sheet
+the data sheet for the PCA9539a is available here: <a>http://www.ti.com/lit/ds/symlink/pca9539.pdf</a>

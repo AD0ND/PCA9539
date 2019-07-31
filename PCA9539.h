@@ -5,8 +5,8 @@
  *      Author: Nico
  */
 
-#ifndef CLSPCA9539_H_
-#define CLSPCA9539_H_
+#ifndef PCA9539_H_
+#define PCA9539_H_
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
@@ -18,8 +18,8 @@
 
 /** enum with names of ports ED0 - ED15 */
 enum {
-    ED0, ED1, ED2 , ED3 , ED4 , ED5 , ED6 , ED7 ,
-    ED8, ED9, ED10, ED11, ED12, ED13, ED14, ED15
+    EA0, EA1, EA2 , EA3 , EA4 , EA5 , EA6 , EA7 ,
+    EB0, EB1, EB2, EB3, EB4, EB5, EB6, EB7
 };
 
 //
@@ -63,4 +63,4 @@ private:
 };
 
 
-#endif /* CLSPCA9539_H_ */
+#endif /* PCA9539_H_ */
