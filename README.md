@@ -1,5 +1,6 @@
 # PCA9539
 Arduino Library to approach PCA9539 I2C expander with digitalRead, digitalWrite and pinMode functions.
+
 **NOTE**
 Pull RESET (pin 3) HIGH for normal operation.
 
