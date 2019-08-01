@@ -21,7 +21,7 @@ http://www.gammon.com.au/i2c
 * digitalWrite() same as Arduino
  
 ## Additional
-The code supports either pinnumbers 0 - 15 (port 0 = 0-7, port 1 = 8-15) or EA0 - EA7 and EB0 - EB7. This to stay more or less in sync with Arduino.
+The code supports either pinnumbers 0 - 15 (port 0 = 0-7, port 1 = 8-15) or A0 - A7 and B0 - B7. This to stay more or less in sync with Arduino.
 
 ## Data Sheet
 the data sheet for the PCA9539a is available here: <a>http://www.ti.com/lit/ds/symlink/pca9539.pdf</a>
