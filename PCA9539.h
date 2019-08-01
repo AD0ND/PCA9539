@@ -18,8 +18,8 @@
 
 /** enum with names of ports ED0 - ED15 */
 enum {
-    EA0, EA1, EA2 , EA3 , EA4 , EA5 , EA6 , EA7 ,
-    EB0, EB1, EB2, EB3, EB4, EB5, EB6, EB7
+    A0, A1, A2, A3, A4, A5, A6, A7 ,
+    B0, B1, B2, B3, B4, B5, B6, B7
 };
 
 //
