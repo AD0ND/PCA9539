@@ -7,14 +7,18 @@
 #include "PCA9539.h"
 #include "Wire.h"
 
-PCA9539 ioport(0x20); // Base address starts at 0x74 for A0 = L and A1 = L
+PCA9539 ioport(0x74); // Base address starts at 0x74 for A0 = L and A1 = L
 
-//Base address for PCA9539 devices 
+//Base address for PCA9539A devices 
 //Address   A1    A0
 //0x74      L     L
 //0x75      L     H
 //0x76      H     L
 //0x77      H     H
+//Be sure to check I2C address with I2C Scanner by Nick Gammon if you are having communication errors
+//Some vendors do not hold to this address range. (Diodes Inc, et al)
+//http://www.gammon.com.au/i2c
+
 
 //For pins used as input, the PCA9539A devices do not include pullups.
 //You will need to add external pullups if needed.
@@ -29,38 +33,39 @@ void setup()
   // set pins to output
   //
   
-    ioport.pinMode(EA0, OUTPUT);
-    ioport.pinMode(EA1, OUTPUT);
-    ioport.pinMode(EA2, OUTPUT);
-    ioport.pinMode(EA3, OUTPUT);
-    ioport.pinMode(EA4, OUTPUT);
-    ioport.pinMode(EA5, OUTPUT);
-    ioport.pinMode(EA6, OUTPUT);
-    ioport.pinMode(EA7, OUTPUT);
-    ioport.pinMode(EB0, OUTPUT);
-    ioport.pinMode(EB1, OUTPUT);
-    ioport.pinMode(EB2, OUTPUT);
-    ioport.pinMode(EB3, OUTPUT);
-    ioport.pinMode(EB4, OUTPUT);
-    ioport.pinMode(EB5, OUTPUT);
-    ioport.pinMode(EB6, OUTPUT);
-    ioport.pinMode(EB7, OUTPUT);
-    ioport.digitalWrite(EA0, HIGH);
-  ioport.digitalWrite(EA1, HIGH);
-  ioport.digitalWrite(EA2, HIGH);
-  ioport.digitalWrite(EA3, HIGH);
-  ioport.digitalWrite(EA4, HIGH);
-  ioport.digitalWrite(EA5, HIGH);
-  ioport.digitalWrite(EA6, HIGH);
-  ioport.digitalWrite(EA7, HIGH);
-  ioport.digitalWrite(EB0, LOW);
-  ioport.digitalWrite(EB1, LOW);
-  ioport.digitalWrite(EB2, LOW);
-  ioport.digitalWrite(EB3, LOW);
-  ioport.digitalWrite(EB4, LOW);
-  ioport.digitalWrite(EB5, LOW);
-  ioport.digitalWrite(EB6, LOW);
-  ioport.digitalWrite(EB7, LOW);
+    ioport.pinMode(A0, OUTPUT);
+    ioport.pinMode(A1, OUTPUT);
+    ioport.pinMode(A2, OUTPUT);
+    ioport.pinMode(A3, OUTPUT);
+    ioport.pinMode(A4, OUTPUT);
+    ioport.pinMode(A5, OUTPUT);
+    ioport.pinMode(A6, OUTPUT);
+    ioport.pinMode(A7, OUTPUT);
+    ioport.pinMode(B0, OUTPUT);
+    ioport.pinMode(B1, OUTPUT);
+    ioport.pinMode(B2, OUTPUT);
+    ioport.pinMode(B3, OUTPUT);
+    ioport.pinMode(B4, OUTPUT);
+    ioport.pinMode(B5, OUTPUT);
+    ioport.pinMode(B6, OUTPUT);
+    ioport.pinMode(B7, OUTPUT);
+  
+  ioport.digitalWrite(A0, HIGH);
+  ioport.digitalWrite(A1, HIGH);
+  ioport.digitalWrite(A2, HIGH);
+  ioport.digitalWrite(A3, HIGH);
+  ioport.digitalWrite(A4, HIGH);
+  ioport.digitalWrite(A5, HIGH);
+  ioport.digitalWrite(A6, HIGH);
+  ioport.digitalWrite(A7, HIGH);
+  ioport.digitalWrite(B0, LOW);
+  ioport.digitalWrite(B1, LOW);
+  ioport.digitalWrite(B2, LOW);
+  ioport.digitalWrite(B3, LOW);
+  ioport.digitalWrite(B4, LOW);
+  ioport.digitalWrite(B5, LOW);
+  ioport.digitalWrite(B6, LOW);
+  ioport.digitalWrite(B7, LOW);
   
 }
 
@@ -70,45 +75,45 @@ void setup()
  */
 void loop()
 {
-  ioport.digitalWrite(EB0, HIGH);
-  ioport.digitalWrite(EA0, LOW);
-  ioport.digitalWrite(EA7, HIGH);
-  ioport.digitalWrite(EB7, LOW);
+  ioport.digitalWrite(B0, HIGH);
+  ioport.digitalWrite(A0, LOW);
+  ioport.digitalWrite(A7, HIGH);
+  ioport.digitalWrite(B7, LOW);
   delay(100);
-  ioport.digitalWrite(EB1, HIGH);
-  ioport.digitalWrite(EA1, LOW);
-  ioport.digitalWrite(EA0, HIGH);
-  ioport.digitalWrite(EB0, LOW);
+  ioport.digitalWrite(B1, HIGH);
+  ioport.digitalWrite(A1, LOW);
+  ioport.digitalWrite(A0, HIGH);
+  ioport.digitalWrite(B0, LOW);
   delay(100);
-  ioport.digitalWrite(EB2, HIGH);
-  ioport.digitalWrite(EA2, LOW);
-  ioport.digitalWrite(EA1, HIGH);
-  ioport.digitalWrite(EB1, LOW);
+  ioport.digitalWrite(B2, HIGH);
+  ioport.digitalWrite(A2, LOW);
+  ioport.digitalWrite(A1, HIGH);
+  ioport.digitalWrite(B1, LOW);
   delay(100);
-  ioport.digitalWrite(EB3, HIGH);
-  ioport.digitalWrite(EA3, LOW);
-  ioport.digitalWrite(EA2, HIGH);
-  ioport.digitalWrite(EB2, LOW);
+  ioport.digitalWrite(B3, HIGH);
+  ioport.digitalWrite(A3, LOW);
+  ioport.digitalWrite(A2, HIGH);
+  ioport.digitalWrite(B2, LOW);
   delay(100);
-  ioport.digitalWrite(EB4, HIGH);
-  ioport.digitalWrite(EA4, LOW);
-  ioport.digitalWrite(EA3, HIGH);
-  ioport.digitalWrite(EB3, LOW);
+  ioport.digitalWrite(B4, HIGH);
+  ioport.digitalWrite(A4, LOW);
+  ioport.digitalWrite(A3, HIGH);
+  ioport.digitalWrite(B3, LOW);
   delay(100);
-  ioport.digitalWrite(EB5, HIGH);
-  ioport.digitalWrite(EA5, LOW);
-  ioport.digitalWrite(EA4, HIGH);
-  ioport.digitalWrite(EB4, LOW);
+  ioport.digitalWrite(B5, HIGH);
+  ioport.digitalWrite(A5, LOW);
+  ioport.digitalWrite(A4, HIGH);
+  ioport.digitalWrite(B4, LOW);
   delay(100);
-  ioport.digitalWrite(EB6, HIGH);
-  ioport.digitalWrite(EA6, LOW);
-  ioport.digitalWrite(EA5, HIGH);
-  ioport.digitalWrite(EB5, LOW);
+  ioport.digitalWrite(B6, HIGH);
+  ioport.digitalWrite(A6, LOW);
+  ioport.digitalWrite(A5, HIGH);
+  ioport.digitalWrite(B5, LOW);
   delay(100);
-  ioport.digitalWrite(EB7, HIGH);
-  ioport.digitalWrite(EA7, LOW);
-  ioport.digitalWrite(EA6, HIGH);
-  ioport.digitalWrite(EB6, LOW);
+  ioport.digitalWrite(B7, HIGH);
+  ioport.digitalWrite(A7, LOW);
+  ioport.digitalWrite(A6, HIGH);
+  ioport.digitalWrite(B6, LOW);
   delay(100);  
   
  
