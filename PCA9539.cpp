@@ -41,7 +41,7 @@
 #include "WProgram.h"
 #endif
 
-#include "clsPCA9539.h"
+#include "PCA9539.h"
 #include "Wire.h"
 
 /**
@@ -49,7 +49,7 @@
  * @param address I2C address of the IO Expander
  * Creates the class interface and sets the I2C Address of the port
  */
-PCA9555::PCA9555(uint8_t address) {
+PCA9539::PCA9539(uint8_t address) {
     _address         = address;        // save the address id
     _valueRegister   = 0;
     Wire.begin();                      // start I2C communication
